@@ -124,12 +124,14 @@ def draw_net(config, genome, view=False, filename=None, node_names=None, show_di
     if node_names is None:
         node_names = {}
 
-    assert type(node_names) is dict
+    if type(node_names) is not dict:
+        raise AssertionError
 
     if node_colors is None:
         node_colors = {}
 
-    assert type(node_colors) is dict
+    if type(node_colors) is not dict:
+        raise AssertionError
 
     node_attrs = {
         'shape': 'circle',
