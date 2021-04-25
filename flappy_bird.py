@@ -9,6 +9,7 @@ Estimated Work Time: 5 hours (1 just for that damn collision)
 import pygame
 import random
 import os
+import sys
 import time
 import neat
 import visualize
@@ -343,7 +344,7 @@ def eval_genomes(genomes, config):
             if event.type == pygame.QUIT:
                 run = False
                 pygame.quit()
-                quit()
+                sys.exit()
                 break
 
         pipe_ind = 0
