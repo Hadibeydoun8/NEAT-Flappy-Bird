@@ -10,6 +10,7 @@ import pygame
 import random
 import os
 import neat
+import sys
 pygame.font.init()  # init font
 
 WIN_WIDTH = 600
@@ -340,7 +341,7 @@ def eval_genomes(genomes, config):
             if event.type == pygame.QUIT:
                 run = False
                 pygame.quit()
-                quit()
+                sys.exit()
                 break
 
         pipe_ind = 0
